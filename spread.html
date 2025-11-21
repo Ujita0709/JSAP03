@@ -11,8 +11,9 @@
 <p>スプレッド構文(オブジェクトのコピー)</p>
 <div id="result2"></div>
 
+
 <script>
-    const array1 = [1,2,3];
+    const array1 = [1,2,3,4,5];
     const object1 = {
         name:'山田太郎',
         age:25,
@@ -20,15 +21,23 @@
     }
     //スプレッド構文
     const array2 = [...array1];
+    const array3 = [...array1,6,7];
     const object2 = {...object1};
+    const object3 = {...object1, name:"佐藤次郎", age:40, place:"大阪府"};
 
     document.getElementById("result1").innerHTML=
     "array1="+JSON.stringify(array1)
-    +"<br>array2="+JSON.stringify(array2);
+    +"<br>array2="+JSON.stringify(array2)
+    +"<br>array3="+JSON.stringify(array3);
 
     document.getElementById("result2").innerHTML=
     "object1.name="+JSON.stringify(object1.name)
-    +"<br>object2.name="+JSON.stringify(object2.name);
+    +"<br>object2.name="+JSON.stringify(object2.name)
+    +"<br>object3.name="+JSON.stringify(object3.name);
+
+
+
+
     
 </script>
 </body>
